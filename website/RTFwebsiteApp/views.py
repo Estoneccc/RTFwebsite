@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Article
+from .models import Article, Specialization
+import requests
+
 
 def main_page(request):
     return render(request, 'main_page.html')
@@ -26,3 +28,50 @@ def add_article(request):
         article.save()
         return redirect('article_detail', pk=article.pk)
     return render(request, 'add_article.html')
+
+
+def get_vacancies_by_specialization(specialization):
+    url = 'https://api.hh.ru/vacancies'
+    params = {'text': specialization}
+    response = requests.get(url, params=params)
+
+    if response.status_code == 200:
+        vacancies = response.json()
+        return vacancies['items']
+
+    elif response.status_code == 400:
+        return "Error"
+    #
+    # elif response.status_code == 403:
+    #     return "captcha"
+    #
+    # elif response.status_code == 404:
+    #     return "No exist"
+
+    return None
+
+def get_specializations():
+    return Specialization.objects.all()
+
+
+def vacancies(request):
+    specializations = get_specializations()
+    vacancies_list = []
+
+    for specialization in specializations:
+        vacancies = get_vacancies_by_specialization(specialization.name)
+        if vacancies:
+            for vacancy in vacancies:
+                name = vacancy.get('name')
+                snippet = vacancy.get('snippet')
+                if snippet:
+                    responsibility = snippet.get('responsibility')
+
+                vacancy_obj = {
+                    'title': name,
+                    'description': responsibility,
+                }
+                vacancies_list.append(vacancy_obj)
+
+    context = {'vacancies': vacancies_list}
+    return render(request, 'vacancies.html', context)
