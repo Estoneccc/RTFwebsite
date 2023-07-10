@@ -1,0 +1,80 @@
+/* -----------HEADER AND TEXT------------- */
+.main__h1 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.main__text {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 18px;
+    line-height: 1.4;
+}
+
+._main-page {
+    margin-top: 100px;
+}
+
+/* --------CARDS BLOCK---------------- */
+.main__cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 55px;
+}
+
+.cards__item {
+    width: 246px;
+    height: 322px;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    background-color: #15014E;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+.cards__item a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.cards__item:hover{
+    background-color: #2A0041;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ----------------CARD CONTENT------------------------ */
+.card__content {
+    display: grid;
+    place-items: center;
+}
+
+.card__icon {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.card__icon svg {
+    width: 100%;
+    height: auto;
+}
+
+.card__header {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.card__text {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-top: 25px;
+}

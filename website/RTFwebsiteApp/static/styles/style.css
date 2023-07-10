@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    color: #FFFFFF;
+    background: linear-gradient(#241C80, #761B96) no-repeat;
+    background-attachment: fixed;
+}
+
+html, body {
+    height: 100%;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ------------MENU ICON---------------------------- */
+.menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 25px;
+    transition: all 0.3s ease 0s;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/menu_icon.svg);
+}
+
+.menu__icon._active {
+    background-image: url(../img/close_icon.svg);
+    width: 26px;
+    height: 26px;
+}
+
+/* ----------MENU BODY----------------------- */
+.menu__body {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.97);
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+}
+
+nav.menu__body._active {
+    left: 0;
+}
+
+/* ---------------------MENU LIST------------------------------ */
+.menu__list {
+    list-style-type: none;
+    position: relative;
+    top: 100px;
+    left: 80px;
+    overflow: auto;
+}
+
+.menu__item {
+    margin-top: 20px;
+}
+
+.menu__link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.menu__link:hover {
+    color: #998eff;
+    text-shadow: 2px 2px 0px #1A00CE;
+}
+
+
+/* ------------------MAIN---------- */
+
+.main__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main__block {
+    max-width: 1000px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    color: #000;
+    padding: 43px 66px;
+
+}
+
+.main__header {
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.main__block:first-child{
+    margin-top: 32px;
+}
+
+.main__block:not(:first-child){
+    margin-top: 40px;
+}
+
+.main__block h1 {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.main__block h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main__image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main__block p, .main__block ul{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33.5px;
+}
+
+.main__block p, .main__block ul {
+    margin-top: 15px;
+}
+
+.main__block ul {
+    margin-left: 20px;
+}
+
+.tip {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.main__block a:visited {
+    color: #0000FF;
+}
+
+.main__info {
+    margin-bottom: 40px;
+}

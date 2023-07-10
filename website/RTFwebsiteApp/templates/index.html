@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/main_page.css' %}">
+    <title>Freshman Help</title>
+</head>
+<body class="">
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="header__menu">
+                    <div class="menu__icon"></div>
+                    <nav class="menu__body">
+                        <div class="container">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+                                <li class="menu__item"><a href="reference-info.html" class="menu__link">Справочная информация</a></li>
+                                <li class="menu__item"><a href="acticles.html" class="menu__link">Статьи и памятки</a></li>
+                                <li class="menu__item"><a href="employment.html" class="menu__link">Трудоустройство</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <main class="main _main-page">
+                <section class="main__greetins">
+                    <h1 class="main__h1">Приветствуем тебя, первокурсник</h1>
+                    <p class="main__text">На этом сайте ты сможешь найти всё, что нужно знать про обучение в ИРИТ-РТФ</p>
+                </section>
+                <section class="main__cards">
+                    <div class="cards__item">
+                        <a class="card__link" href="reference-info.html">
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none">
+                                        <g filter="url(#filter0_d_2_114)">
+                                        <rect x="4" width="100" height="100" rx="25" fill="white"/>
+                                        </g>
+                                        <rect x="40.4445" y="22.5461" width="47.2222" height="7.0922" rx="2" fill="black"/>
+                                        <ellipse cx="27.9444" cy="26.0922" rx="6.94445" ry="7.0922" fill="black"/>
+                                        <rect x="40.4444" y="46.6596" width="47.2222" height="7.0922" rx="2" fill="black"/>
+                                        <ellipse cx="27.9444" cy="50.2057" rx="6.94445" ry="7.0922" fill="black"/>
+                                        <rect x="40.4444" y="70.7731" width="47.2222" height="7.0922" rx="2" fill="black"/>
+                                        <ellipse cx="27.9444" cy="74.3191" rx="6.94445" ry="7.0922" fill="black"/>
+                                        <defs>
+                                        <filter id="filter0_d_2_114" x="0" y="0" width="108" height="108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feComposite in2="hardAlpha" operator="out"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_114"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_114" result="shape"/>
+                                        </filter>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <h3 class="card__header">Справочная информация</h3>
+                                <div class="card__text-block">
+                                <p class="card__text">Соц. сети института<br>Как найти деканат?<br>Карта корпусов УрФУ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cards__item">
+                        <a class="card__link" href="acticles.html">
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                        <rect width="100" height="100" rx="25" fill="white"/>
+                                        <rect x="18.5" y="12.5" width="37" height="22" rx="11" fill="white" stroke="black" stroke-width="3"/>
+                                        <path d="M31.3211 21.2038C32.0242 20.0155 31.5716 18.5972 30.3102 18.0358C29.0487 17.4745 27.4561 17.9827 26.753 19.1709L31.3211 21.2038ZM24.055 33.4825L31.3211 21.2038L26.753 19.1709L19.4869 31.4497L24.055 33.4825Z" fill="black"/>
+                                        <path d="M31.3545 19.2495C30.7002 18.0337 29.1322 17.4679 27.8523 17.9859C26.5725 18.5038 26.0653 19.9093 26.7196 21.1252L31.3545 19.2495ZM38.922 33.312L31.3545 19.2495L26.7196 21.1252L34.2872 35.1877L38.922 33.312Z" fill="black"/>
+                                        <path d="M44.3093 25.1431C45.0971 24.0091 44.801 22.4741 43.6481 21.7144C42.4952 20.9547 40.9219 21.2581 40.1342 22.392L44.3093 25.1431ZM37.8917 34.3807L44.3093 25.1431L40.1342 22.392L33.7166 31.6297L37.8917 34.3807Z" fill="black"/>
+                                        <path d="M44.7118 22.5248C43.9979 21.343 42.448 20.9413 41.25 21.6276C40.052 22.3139 39.6594 23.8284 40.3733 25.0103L44.7118 22.5248ZM51.1294 33.1498L44.7118 22.5248L40.3733 25.0103L46.7909 35.6353L51.1294 33.1498Z" fill="black"/>
+                                        <path d="M19.3166 47L82 47" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M19 59L81.6834 59" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M19.3166 71L82 71" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M19 83L81.6834 83" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M64.0905 15L82 15" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M64 23.6667L81.9095 23.6667" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                        <path d="M64.0905 32.3333L82 32.3333" stroke="black" stroke-width="6" stroke-linecap="round"/>
+                                      </svg>
+                                </div>
+                                <h3 class="card__header">Статьи и памятки</h3>
+                                <div class="card__text-block">
+                                <p class="card__text">Про ИОТ, стипендии,<br>общежития, отсрочку<br>от армии и много другое</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cards__item">
+                        <a class="card__link" href="employment.html">
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                        <rect width="100" height="100" rx="25" fill="white"/>
+                                        <rect x="7.5461" y="26.6892" width="43.0438" height="64.7671" rx="8" transform="rotate(-19.1822 7.5461 26.6892)" fill="white" stroke="black" stroke-width="4"/>
+                                        <rect x="15.3598" y="30.5899" width="30.8473" height="52.264" rx="4" transform="rotate(-19.1822 15.3598 30.5899)" fill="white" stroke="black" stroke-width="4"/>
+                                        <path d="M44.6487 48.5416C45.8467 51.9852 44.0827 55.6606 40.8082 56.7997C37.5337 57.9389 33.8695 56.1519 32.6715 52.7083C31.4735 49.2648 33.2375 45.5894 36.512 44.4502C39.7864 43.3111 43.4507 45.098 44.6487 48.5416Z" fill="white" stroke="black" stroke-width="3"/>
+                                        <path d="M23.0029 27.0518C23.7798 27.4409 24.4764 27.981 25.0528 28.6413C25.6291 29.3017 26.074 30.0693 26.362 30.9004C26.6501 31.7316 26.7756 32.6099 26.7314 33.4852C26.6873 34.3606 26.4743 35.2158 26.1047 36.0021C25.7351 36.7885 25.216 37.4905 24.5772 38.068C23.9384 38.6456 23.1923 39.0875 22.3816 39.3684C21.5708 39.6493 20.7113 39.7638 19.852 39.7053C18.9928 39.6468 18.1506 39.4164 17.3737 39.0274L18.4534 36.7303C18.9323 36.9701 19.4514 37.1121 19.981 37.1482C20.5106 37.1842 21.0405 37.1137 21.5402 36.9405C22.0399 36.7674 22.4998 36.495 22.8935 36.139C23.2873 35.783 23.6072 35.3503 23.835 34.8656C24.0629 34.381 24.1941 33.8538 24.2213 33.3143C24.2486 32.7747 24.1712 32.2333 23.9937 31.7211C23.8161 31.2088 23.5419 30.7356 23.1866 30.3286C22.8314 29.9216 22.402 29.5887 21.9231 29.3489L23.0029 27.0518Z" fill="black"/>
+                                        <rect x="34" y="13.4574" width="50" height="73" rx="8" fill="white" stroke="black" stroke-width="4"/>
+                                        <rect x="41" y="20.4574" width="36" height="59" rx="4" fill="white" stroke="black" stroke-width="4"/>
+                                        <circle cx="59" cy="50.4574" r="7.5" fill="white" stroke="black" stroke-width="3"/>
+                                        <path d="M50.9163 19.7671C51.6119 20.4644 52.1634 21.2919 52.5392 22.2023C52.915 23.1127 53.1078 24.0882 53.1066 25.0731C53.1054 26.058 52.9102 27.033 52.5322 27.9425C52.1542 28.852 51.6007 29.6781 50.9034 30.3737C50.2062 31.0693 49.3787 31.6207 48.4683 31.9965C47.5579 32.3723 46.5824 32.5651 45.5975 32.5639C44.6126 32.5627 43.6375 32.3676 42.728 31.9895C41.8186 31.6115 40.9924 31.0581 40.2968 30.3608L42.3338 28.3288C42.7625 28.7586 43.2717 29.0997 43.8323 29.3327C44.3929 29.5657 44.9939 29.686 45.601 29.6868C46.208 29.6875 46.8093 29.5687 47.3705 29.337C47.9316 29.1054 48.4417 28.7655 48.8715 28.3368C49.3012 27.908 49.6424 27.3988 49.8754 26.8382C50.1084 26.2776 50.2287 25.6766 50.2294 25.0696C50.2302 24.4625 50.1113 23.8612 49.8797 23.3001C49.648 22.7389 49.3082 22.2289 48.8794 21.7991L50.9163 19.7671Z" fill="black"/>
+                                    </svg>
+                                </div>
+                                <h3 class="card__header">Трудоустройство</h3>
+                                <div class="card__text-block">
+                                <p class="card__text">Актуальный вакансии<br>по твоей специальность<br>Обзор рынка</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

@@ -4,10 +4,10 @@ import requests
 
 
 def main_page(request):
-    return render(request, 'main_page.html')
+    return render(request, 'index.html')
 
 def information(request):
-    return render(request, 'information.html')
+    return render(request, 'reference-info.html')
 
 def article_list(request):
     articles = Article.objects.all()
@@ -16,9 +16,6 @@ def article_list(request):
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
     return render(request, 'article_detail.html', {'article': article})
-
-def job(request):
-    return render(request, 'job.html')
 
 def add_article(request):
     if request.method == 'POST':
@@ -54,7 +51,7 @@ def get_specializations():
     return Specialization.objects.all()
 
 
-def vacancies(request):
+def employment(request):
     specializations = get_specializations()
     vacancies_list = []
 
@@ -74,4 +71,4 @@ def vacancies(request):
                 vacancies_list.append(vacancy_obj)
 
     context = {'vacancies': vacancies_list}
-    return render(request, 'vacancies.html', context)
+    return render(request, 'employment.html', context)
