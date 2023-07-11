@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Статья: {{ article.title }}</title>
-</head>
-<body>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.content }}</p>
-    <p>Дата публикации: {{ article.publication_date }}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}<link rel="stylesheet" href="{% static 'styles/main_page.css' %}">{% endblock head %}
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__header">
+            <h1>{{ article.title }}</h1>
+        </div>
+        <div class="main__article-text">
+            <span class="main__publish-date">Дата публикации: {{ article.publication_date }}</span> 
+            <p>{{ article.content }}</p>
+        </div>
+    </main>
+{% endblock main %}
