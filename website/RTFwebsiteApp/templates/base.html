@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    {% block head %} {% endblock %}
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="header__menu">
+                    <div class="menu__icon"></div>
+                    <nav class="menu__body">
+                        <div class="container">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+                                <li class="menu__item"><a href="reference-info.html" class="menu__link">Справочная информация</a></li>
+                                <li class="menu__item"><a href="acticles.html" class="menu__link">Статьи и памятки</a></li>
+                                <li class="menu__item"><a href="employment.html" class="menu__link">Трудоустройство</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            {% block main %} {% endblock %}
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

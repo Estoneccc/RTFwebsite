@@ -1,90 +1,63 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Open+Sans:wght@300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <title>Freshman Help</title>
-</head>
-<body class="">
-    <div class="wrapper">
-        <div class="container">
-            <header class="header">
-                <div class="header__menu">
-                    <div class="menu__icon"></div>
-                    <nav class="menu__body">
-                        <div class="container">
-                            <ul class="menu__list">
-                                <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
-                                <li class="menu__item"><a href="reference-info.html" class="menu__link">Справочная информация</a></li>
-                                <li class="menu__item"><a href="acticles.html" class="menu__link">Статьи и памятки</a></li>
-                                <li class="menu__item"><a href="employment.html" class="menu__link">Трудоустройство</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </header>
-            <main class="main main__container">
-                <div class="main__header">
-                    <h1>Справочная информация</h1>
-                </div>
-                <section class="main__info">
-                    <div class="main__block _block">
-                        <h3>Карта корпусов университета на улице Мира</h3>
-                        <div class="main__image"><img src="{% static 'img/campus_map.png' %}" alt="Карта корпусов УрФУ на улице Мира"></div>
-                        <p class="tip">Советуем сохранить её себе в галерею телефона</p>
-                        <p>Буквами помечены краткие названия корпусов, они так же используются для нумерации аудиторий, например, Р-219 или ГУК-101</p>
-                        <p>Фиолетовыми линиями обозначены подземные переходы между корпусами</p>
-                        <ul>
-                            <li>ГУК — Главный Учебный Корпус — Мира, 19</li>
-                            <li>Р — ИРИТ-РТФ (Радиофак или Радик) — Мира, 32</li>
-                            <li>МТ — ИНМТ — Мира, 28 (левая часть)</li>
-                            <li>Х — ХТИ (Химфак) — Мира, 28 (правая часть)</li>
-                            <li>Ф — ФТИ (Физтех) — Мира, 21</li>
-                            <li>Т — УралЭНИН (Теплофак) — Софьи Ковалевской, 5</li>
-                            <li>С — ИСА (Стройфак или Стройка) — Мира, 17</li>
-                            <li>СП — Стройфак пристрой (туда можно попасть только через подземные переходи из ГУКа или стройфака)</li>
-                            <li>И — ИнЭУ (инжек) — Мира, 19 (является пристройкой к ГУКу, но имеет свой вход с улицы, справа от ГУКа под вывеской “СКБ-Банк”)</li>
-                            <li>М — Мехфак (является пристройкой у ГУКу, не имеет отдельного входа)</li>
-                            <li>Э — Электрофак (является пристройкой у ГУКу, не имеет отдельного входа)</li>
-                        </ul>
-                    </div>
-                    <div class="main__block _block">
-                        <h3>Номера аудиторий которые стоит запомнить</h3>
-                        <ul>
-                            <li>Деканат ИРИТ-РТФ находится в Р-219 (корпус ИРИТ-РТФ, в левом крыле на втором этаже). <a href="https://rtf.urfu.ru/ru/kontakty/">Подробнее о работе деканата</a></li>
-                            <li>Профсоюз ИРИТ-РТФ находится в Р-126 (корпус ИРИТ-РТФ, идёте в левое крыло, после турникета поворачиваете направо, поднимаете по ступенькам и справа по коридору будет большая синяя дверь). <a href="https://vk.com/page-6214974_54753852">Подробнее о работе профсоюза.</a> <a href="https://vk.com/page-6214974_54722794">График приёма заявлений на материальную помощь</a></li>
-                        </ul>
-                    </div>
-                    <div class="main__block _block">
-                        <h3>Социальные сети университета</h3>
-                        <ul>
-                            <li>Группа ВКонтакте <a href="https://vk.com/ural.federal.university">Уральского федерального университета</a></li>
-                            <li>Группа ВКонтакте <a href="https://vk.com/posnews">Союза Студентов УрФУ #posnews</a></li>
-                            <li>Группа ВКонтакте <a href="https://vk.com/creation_urfu">Творчество УрФУ</a></li>
-                        </ul>
-                    </div>
-                    <div class="main__block _block">
-                        <h3>Социальные сети института</h3>
-                        <ul>
-                            <li>Группа ВКонтакте <a href="https://vk.com/irit_rtf">Союза Студентов ИРИТ-РТФ УрФУ</a> — новости о всех мероприятиях института</li>
-                            <li>Группа ВКонтакте <a href="https://vk.com/iot_first_urfu">Первый курс ИОТ</a> — всё что касается учёбы и ИОТ (подробнее об ИОТ)</li>
-                            <li>Телеграм канал <a href="https://t.me/rtf_urfu">На волнах ИРИТ-РТФ</a> — статьи от редакции института</a></li>
-                        </ul>
-                        <p class="tip">Советуем так же включить уведомления на группы ВКонтакте</p>
-                    </div>
-                    <div class="main__block _block">
-                        <h3>БРС Бот</h3>
-                        <p>Этот бот позволяет быстро проверить БРС в чате, а так же присылает уведомления, когда преподаватель выставит вам баллы. <br> Работает <a href="https://vk.com/bot_urfu">ВКонтакте</a> и в <a href="http://t.me/brs_urfu_bot">Телеграме</a></p>
-                    </div>
-                </section>
-            </main>
+
+{% block head %}<link rel="stylesheet" href="{% static 'styles/main_page.css' %}">{% endblock head %}
+{% block title %}Freshman Help{% endblock title %}
+
+{% block main %}
+    <main class="main main__container">
+        <div class="main__header">
+            <h1>Справочная информация</h1>
         </div>
-    </div>
-    <script src="{% static 'script.js' %}"></script>
-</body>
-</html>
+        <section class="main__info">
+            <div class="main__block _block">
+                <h3>Карта корпусов университета на улице Мира</h3>
+                <div class="main__image"><img src="{% static 'img/campus_map.png' %}" alt="Карта корпусов УрФУ на улице Мира"></div>
+                <p class="tip">Советуем сохранить её себе в галерею телефона</p>
+                <p>Буквами помечены краткие названия корпусов, они так же используются для нумерации аудиторий, например, Р-219 или ГУК-101</p>
+                <p>Фиолетовыми линиями обозначены подземные переходы между корпусами</p>
+                <ul>
+                    <li>ГУК — Главный Учебный Корпус — Мира, 19</li>
+                    <li>Р — ИРИТ-РТФ (Радиофак или Радик) — Мира, 32</li>
+                    <li>МТ — ИНМТ — Мира, 28 (левая часть)</li>
+                    <li>Х — ХТИ (Химфак) — Мира, 28 (правая часть)</li>
+                    <li>Ф — ФТИ (Физтех) — Мира, 21</li>
+                    <li>Т — УралЭНИН (Теплофак) — Софьи Ковалевской, 5</li>
+                    <li>С — ИСА (Стройфак или Стройка) — Мира, 17</li>
+                    <li>СП — Стройфак пристрой (туда можно попасть только через подземные переходи из ГУКа или стройфака)</li>
+                    <li>И — ИнЭУ (инжек) — Мира, 19 (является пристройкой к ГУКу, но имеет свой вход с улицы, справа от ГУКа под вывеской “СКБ-Банк”)</li>
+                    <li>М — Мехфак (является пристройкой у ГУКу, не имеет отдельного входа)</li>
+                    <li>Э — Электрофак (является пристройкой у ГУКу, не имеет отдельного входа)</li>
+                </ul>
+            </div>
+            <div class="main__block _block">
+                <h3>Номера аудиторий которые стоит запомнить</h3>
+                <ul>
+                    <li>Деканат ИРИТ-РТФ находится в Р-219 (корпус ИРИТ-РТФ, в левом крыле на втором этаже). <a href="https://rtf.urfu.ru/ru/kontakty/">Подробнее о работе деканата</a></li>
+                    <li>Профсоюз ИРИТ-РТФ находится в Р-126 (корпус ИРИТ-РТФ, идёте в левое крыло, после турникета поворачиваете направо, поднимаете по ступенькам и справа по коридору будет большая синяя дверь). <a href="https://vk.com/page-6214974_54753852">Подробнее о работе профсоюза.</a> <a href="https://vk.com/page-6214974_54722794">График приёма заявлений на материальную помощь</a></li>
+                </ul>
+            </div>
+            <div class="main__block _block">
+                <h3>Социальные сети университета</h3>
+                <ul>
+                    <li>Группа ВКонтакте <a href="https://vk.com/ural.federal.university">Уральского федерального университета</a></li>
+                    <li>Группа ВКонтакте <a href="https://vk.com/posnews">Союза Студентов УрФУ #posnews</a></li>
+                    <li>Группа ВКонтакте <a href="https://vk.com/creation_urfu">Творчество УрФУ</a></li>
+                </ul>
+            </div>
+            <div class="main__block _block">
+                <h3>Социальные сети института</h3>
+                <ul>
+                    <li>Группа ВКонтакте <a href="https://vk.com/irit_rtf">Союза Студентов ИРИТ-РТФ УрФУ</a> — новости о всех мероприятиях института</li>
+                    <li>Группа ВКонтакте <a href="https://vk.com/iot_first_urfu">Первый курс ИОТ</a> — всё что касается учёбы и ИОТ (подробнее об ИОТ)</li>
+                    <li>Телеграм канал <a href="https://t.me/rtf_urfu">На волнах ИРИТ-РТФ</a> — статьи от редакции института</a></li>
+                </ul>
+                <p class="tip">Советуем так же включить уведомления на группы ВКонтакте</p>
+            </div>
+            <div class="main__block _block">
+                <h3>БРС Бот</h3>
+                <p>Этот бот позволяет быстро проверить БРС в чате, а так же присылает уведомления, когда преподаватель выставит вам баллы. <br> Работает <a href="https://vk.com/bot_urfu">ВКонтакте</a> и в <a href="http://t.me/brs_urfu_bot">Телеграме</a></p>
+            </div>
+        </section>
+    </main>
+{% endblock main %}

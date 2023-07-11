@@ -25,10 +25,13 @@
 .article__card a {
     color: inherit;
     text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .article__content {
-    margin: 30px 35px;
+    padding: 30px 35px;
 }
 
 .article__card h4 {
