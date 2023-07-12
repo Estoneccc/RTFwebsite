@@ -5,17 +5,27 @@
 
 {% block main %}
     <main class="main main__container">
-        <div class="main__header">
-            <h1>Трудоустройство</h1>
-        </div>
-        <section class="main__vacancies">
-            {% for vacancy in vacancies %}
-                <div class="main__block">
-                    <h3>{{ vacancy.title }}</h3>
-                    <p>{{ vacancy.description }}</p>
-                    <!-- Остальные поля вакансии -->
-                </div>
+    <div class="main__header">
+        <h1>Трудоустройство</h1>
+    </div>
+    <form action="{% url 'employment' %}" method="get">
+        <select name="specialization">
+            <option value="">Все специализации</option>
+            {% for specialization in specializations %}
+                <option value="{{ specialization.name }}" {% if selected_specialization == specialization.name %}selected{% endif %}>{{ specialization.name }}</option>
             {% endfor %}
-        </section> 
-    </main>
+        </select>
+        <input type="submit" value="Фильтровать">
+    </form>
+    <section class="main__vacancies">
+        {% for vacancy in vacancies %}
+            <div class="main__block">
+                <h3>{{ vacancy.title }}</h3>
+                <p>{{ vacancy.description }}</p>
+                <p>З/п от {{ vacancy.salary }} руб.</p>
+                <p><a href="{{ vacancy.url }}">{{ vacancy.url }}</a></p>
+            </div>
+        {% endfor %}
+    </section>
+</main>
 {% endblock main %}

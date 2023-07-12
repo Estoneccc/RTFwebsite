@@ -20,10 +20,10 @@
                     <nav class="menu__body">
                         <div class="container">
                             <ul class="menu__list">
-                                <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
-                                <li class="menu__item"><a href="reference-info.html" class="menu__link">Справочная информация</a></li>
-                                <li class="menu__item"><a href="acticles.html" class="menu__link">Статьи и памятки</a></li>
-                                <li class="menu__item"><a href="employment.html" class="menu__link">Трудоустройство</a></li>
+                                <li class="menu__item"><a href="{% url 'main_page' %}" class="menu__link">Главная</a></li>
+                                <li class="menu__item"><a href="{% url 'information' %}" class="menu__link">Справочная информация</a></li>
+                                <li class="menu__item"><a href="{% url 'article_list' %}" class="menu__link">Статьи и памятки</a></li>
+                                <li class="menu__item"><a href="{% url 'employment' %}" class="menu__link">Трудоустройство</a></li>
                             </ul>
                         </div>
                     </nav>
