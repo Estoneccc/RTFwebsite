@@ -65,6 +65,8 @@ def employment(request):
                     responsibility = snippet.get('responsibility')
                 if salary:
                     currency = salary.get('from')
+                else:
+                    currency = None
                 vacancy_obj = {
                     'title': name,
                     'description': responsibility,
@@ -85,6 +87,8 @@ def employment(request):
                         responsibility = snippet.get('responsibility')
                     if salary:
                         currency = salary.get('from')
+                    else:
+                        currency = None
                     vacancy_obj = {
                         'title': name,
                         'description': responsibility,
