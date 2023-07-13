@@ -90,8 +90,8 @@ nav.menu__body._active {
 }
 
 .menu__link:hover {
-    color: #998eff;
-    text-shadow: 2px 2px 0px #1A00CE;
+    color: #6353ff;
+    text-shadow: 2px 2px 0px #000000;
 }
 
 
@@ -239,6 +239,11 @@ nav.menu__body._active {
 .main__block a:visited, 
 .main__article-text a:visited {
     color: #0000FF;
+}
+
+.main__block a:hover, 
+.main__article-text a:hover {
+    color: #800080;
 }
 
 .main__info {

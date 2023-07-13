@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}<link rel="stylesheet" href="{% static 'styles/employment.css' %}">{% endblock head %}
 {% block title %}Трудоустройство{% endblock title %}
 
 {% block main %}
@@ -8,22 +9,27 @@
     <div class="main__header">
         <h1>Трудоустройство</h1>
     </div>
-    <form action="{% url 'employment' %}" method="get">
-        <select name="specialization">
-            <option value="">Все специализации</option>
-            {% for specialization in specializations %}
-                <option value="{{ specialization.name }}" {% if selected_specialization == specialization.name %}selected{% endif %}>{{ specialization.name }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Фильтровать">
-    </form>
+    <section class="main__block _filters">
+        <form action="{% url 'employment' %}" method="get">
+            <select name="specialization">
+                <option value="">Все специализации</option>
+                {% for specialization in specializations %}
+                    <option value="{{ specialization.name }}" {% if selected_specialization == specialization.name %}selected{% endif %}>{{ specialization.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Фильтровать">
+        </form>
+    </section>
     <section class="main__vacancies">
         {% for vacancy in vacancies %}
             <div class="main__block">
                 <h3>{{ vacancy.title }}</h3>
+                <span class="salary">{% if vacancy.salary %}От {{ vacancy.salary }} руб. 
+                                        {% else %} Зарплата не указана
+                                    {% endif %}
+                </span>
                 <p>{{ vacancy.description|striptags }}</p>
-                <p>З/п от {{ vacancy.salary }} руб.</p>
-                <p><a href="{{ vacancy.url }}">{{ vacancy.url }}</a></p>
+                <p><a href="{{ vacancy.url }}">Открыть вакансию</a></p>
             </div>
         {% endfor %}
     </section>

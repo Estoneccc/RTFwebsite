@@ -1,0 +1,52 @@
+.salary {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    color: rgb(225, 0, 0);
+    margin-top: 5px;
+    display: block;
+}
+
+._filters {
+    padding: 10px 15px;
+}
+
+._filters select,
+._filters input {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    
+    height: 25px;
+    border-radius: 25px;
+}
+
+._filters select {
+    padding: 0px 5px;
+    max-width: 500px;
+}
+
+._filters input {
+    background: #fff;
+    padding: 0px 10px;
+    margin-left: 5px;
+}
+
+@media (max-width: 695px) {
+    ._filters input {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    ._filters select {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 553px) {
+    ._filters select {
+        width: 100%;
+    }
+}
