@@ -9,7 +9,7 @@
 .article__card {
     margin: 35px 45px;
     width: calc(33.3% - 100px);
-    height: 370px;
+    height: 200px;
     border-radius: 25px;
     background-color: #FFFFFF;
     color: #000000;
@@ -25,7 +25,8 @@
 .article__card a {
     color: inherit;
     text-decoration: none;
-    display: block;
+    display: grid;
+    place-items: center;
     width: 100%;
     height: 100%;
 }

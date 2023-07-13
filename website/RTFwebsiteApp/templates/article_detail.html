@@ -11,7 +11,7 @@
         </div>
         <div class="main__article-text">
             <span class="main__publish-date">Дата публикации: {{ article.publication_date }}</span> 
-            <p>{{ article.content }}</p>
+            <p>{{ article.content|safe }}</p>
         </div>
     </main>
 {% endblock main %}
