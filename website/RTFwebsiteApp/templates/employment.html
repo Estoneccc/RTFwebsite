@@ -21,7 +21,7 @@
         {% for vacancy in vacancies %}
             <div class="main__block">
                 <h3>{{ vacancy.title }}</h3>
-                <p>{{ vacancy.description }}</p>
+                <p>{{ vacancy.description|striptags }}</p>
                 <p>З/п от {{ vacancy.salary }} руб.</p>
                 <p><a href="{{ vacancy.url }}">{{ vacancy.url }}</a></p>
             </div>

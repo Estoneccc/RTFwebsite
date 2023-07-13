@@ -62,7 +62,7 @@ def employment(request):
                 salary = vacancy.get('salary')
                 url = vacancy.get('alternate_url')
                 if snippet:
-                    responsibility = bleach.clean(snippet.get('responsibility'), tags=[], strip=True)
+                    responsibility = snippet.get('responsibility')
                 if salary:
                     currency = salary.get('from')
                 vacancy_obj = {
@@ -82,7 +82,7 @@ def employment(request):
                     salary = vacancy.get('salary')
                     url = vacancy.get('alternate_url')
                     if snippet:
-                        responsibility = bleach.clean(snippet.get('responsibility'), tags=[], strip=True)
+                        responsibility = snippet.get('responsibility')
                     if salary:
                         currency = salary.get('from')
                     vacancy_obj = {
