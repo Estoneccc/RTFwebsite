@@ -22,6 +22,20 @@
     padding: 0px 55px;
 }
 
+@media (max-width: 899px) {
+    .main__cards {
+        display: block;
+        max-width: 246px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 1195px) {
+    .main__greetins {
+        padding: 0px 15px;
+    }
+}
+
 .cards__item {
     width: 246px;
     height: 322px;
@@ -31,6 +45,13 @@
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.4s ease 0s;
+}
+
+@media (max-width: 899px) {
+    .cards__item {
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
 }
 
 .cards__item a{

@@ -17,6 +17,26 @@
     transition: all 0.4s ease 0s;
 }
 
+@media (max-width: 1206px) {
+    .article__card {
+        width: calc(50% - 160px);
+    }
+}
+
+@media (max-width: 956px) {
+    .main__articles {
+        display: block;
+    }
+
+    .article__card {
+        width: auto;
+        max-width: 450px;
+        margin: 30px auto;
+    }
+}
+
+
+
 .article__card:hover {
     background-color: rgb(64, 64, 173);
     color: #FFFFFF;
