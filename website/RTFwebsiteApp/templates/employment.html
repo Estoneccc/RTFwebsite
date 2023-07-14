@@ -28,7 +28,7 @@
                                         {% else %} Зарплата не указана
                                     {% endif %}
                 </span>
-                <p>{{ vacancy.description|striptags }}</p>
+                <p>{% if vacancy.description %}{{ vacancy.description|striptags }} {% else %} Нет описания {% endif %}</p>
                 <p><a href="{{ vacancy.url }}">Открыть вакансию</a></p>
             </div>
         {% endfor %}
